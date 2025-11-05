@@ -84,8 +84,8 @@ header {
   width: 100%;
 }
 
-/* Hide navbar on vertical/mobile view (below 768px width) */
-@media (max-width: 768px) {
+/* Hide navbar on vertical mobile screens only */
+@media (max-width: 768px) and (orientation: portrait) {
   .nav-container {
     display: none;
   }
@@ -93,7 +93,7 @@ header {
 
 /* Sections spacing */
 main > section {
-  padding: 100px 1rem 50px; /* top padding to account for fixed header */
+  padding: 100px 1rem 50px; /* top padding for fixed header */
 }
 
 /* Optional: smooth scroll behavior for anchor links */

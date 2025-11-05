@@ -12,7 +12,7 @@ export default function App() {
     <>
       <header>
         <div className="nav-container">
-          <div className="logo">Prachi</div>
+          <div className="logo">Portfolio</div>
           <nav className="nav-menu">
             <a href="#home" className="nav-link">Home</a>
             <a href="#about" className="nav-link">About</a>
