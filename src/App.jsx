@@ -1,39 +1,37 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import React from "react";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
 import Education from "./pages/Education";
 import Achievements from "./pages/Achievements";
-import "./App.css"; // Import the CSS file
+import Contact from "./pages/Contact";
+import "./app.css";
 
-function App() {
+export default function App() {
   return (
-    <Router>
+    <>
       <header>
         <div className="nav-container">
-          <div className="logo">Portfolio</div>
+          <div className="logo">Prachi</div>
           <nav className="nav-menu">
-            <Link to="/" className="nav-link">Home</Link>
-            <Link to="/about" className="nav-link">About</Link>
-            <Link to="/projects" className="nav-link">Projects</Link>
-            <Link to="/education" className="nav-link">Education</Link>
-            <Link to="/achievements" className="nav-link">Achievements</Link>
-            <Link to="/contact" className="nav-link">Contact</Link>
+            <a href="#home" className="nav-link">Home</a>
+            <a href="#about" className="nav-link">About</a>
+            <a href="#projects" className="nav-link">Projects</a>
+            <a href="#education" className="nav-link">Education</a>
+            <a href="#achievements" className="nav-link">Achievements</a>
+            <a href="#contact" className="nav-link">Contact</a>
           </nav>
         </div>
       </header>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/education" element={<Education />} />
-        <Route path="/achievements" element={<Achievements />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+      <main>
+        <section id="home"><Home /></section>
+        <section id="about"><About /></section>
+        <section id="projects"><Projects /></section>
+        <section id="education"><Education /></section>
+        <section id="achievements"><Achievements /></section>
+        <section id="contact"><Contact /></section>
+      </main>
+    </>
   );
 }
-
-export default App;
