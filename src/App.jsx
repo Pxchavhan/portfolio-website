@@ -5,7 +5,7 @@ import Projects from "./pages/Projects";
 import Education from "./pages/Education";
 import Achievements from "./pages/Achievements";
 import Contact from "./pages/Contact";
-import "./app.css";
+import "./App.css";
 
 export default function App() {
   return (
