@@ -100,3 +100,45 @@ main > section {
 html {
   scroll-behavior: smooth;
 }
+/* Aesthetic header for vertical (portrait) mode */
+.portrait-header {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  background-color: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+  z-index: 101;
+}
+
+.portrait-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Show portrait header only when vertical */
+@media (max-width: 768px) and (orientation: portrait) {
+  .portrait-header {
+    display: block;
+  }
+  .main-header {
+    display: none;
+  }
+}
+
+/* Show navbar normally when horizontal */
+@media (orientation: landscape) {
+  .portrait-header {
+    display: none;
+  }
+  .main-header {
+    display: block;
+  }
+}

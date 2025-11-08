@@ -10,7 +10,13 @@ import "./App.css";
 export default function App() {
   return (
     <>
-      <header>
+      {/* Shown only when mobile is vertical */}
+      <div className="portrait-header">
+        <h1 className="portrait-title">Prachi’s Portfolio</h1>
+      </div>
+
+      {/* Main header (hidden in portrait) */}
+      <header className="main-header">
         <div className="nav-container">
           <div className="logo">Portfolio</div>
           <nav className="nav-menu">
